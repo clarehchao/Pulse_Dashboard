@@ -1,0 +1,126 @@
+/* custom.css */
+
+/* Titles and subtitles */
+.title {
+    font-size: 28px;
+    color: #3a4552;
+}
+
+/* Body */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    margin-left: 16.3rem;
+    margin-right: 8px;
+    margin-top: 2rem;
+
+}
+
+/* Content */
+.content {
+    margin-left: calc(16.3rem + 1rem);
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.subtitle-medium {
+    font-size: 24px;
+    color: #3a4552;
+}
+
+.subtitle-small {
+    font-size: 16px;
+    color: #3a4552;
+    font-weight: normal;
+}
+
+.subtitle-small-color {
+    font-size: 18px;
+    color: #803f0c;
+}
+
+.subtitle-sidebar {
+    font-size: 12px;
+    color: #3a4552;
+}
+
+.subtitle-sidebar a {
+    color: #3a4552;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subtitle-sidebar a:hover {
+    color: #f79500;
+}
+
+.sidebar-logo {
+    margin-top: 1rem;
+    display: flex;
+
+}
+
+.sidebar-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16rem;
+    padding: 1rem 1rem;
+    background-color: #fff;
+}
+
+/* Cards charts */
+.chart-card {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 8px rgba(89, 87, 87, 0.1);
+}
+
+.custom-dropdown {
+    color: #3a4552;
+    background-color: #ececec;
+}
+
+.card {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 6px 8px rgba(89, 87, 87, 0.1);
+}
+
+.card-body-1 {
+    padding: 0px;
+    color: #3a4552;
+    font-size: 20px
+}
+
+
+.card-title-1 {
+    white-space: nowrap;
+    font-size: 60px;
+    color: #07beb8;
+}
+
+.card-title-2 {
+    white-space: nowrap;
+    font-size: 20px;
+    color: #3a4552;
+}
+
+.card-body-2 {
+    padding: 0px;
+    color: #07beb8;
+    font-size: 60px;
+}
+
+
