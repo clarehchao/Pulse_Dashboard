@@ -28,7 +28,7 @@ The dashboard is divided into six main pages:
 
 ## Tools that I used to build
 
-The dashboard was built using Python, Plotly Dash Framework, and CSS. It is hosted by [pythoneverywhere](www.pythoneverywhere.com).
+The dashboard was built using Python, Plotly Dash Framework, and CSS. It is hosted by [pythoneverywhere](https://www.pythoneverywhere.com).
 
 ![Static Badge](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=%23FFDC0F)
 
