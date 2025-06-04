@@ -28,7 +28,7 @@ The dashboard is divided into six main pages:
 
 ## Technical Development Note-to-self
 
-- Dash 2.14.2 and beyond, don't need to use List anymore for Input/Output callback. [Examples on Dash documentation](https://dash.plotly.com/basic-callbacks) shows input/output callback without using a list. The use of list was in legacy version of Dash.
+- Dash 2.14.2 and beyond, don't need to use List anymore for Input/Output callback. [Examples on Dash documentations](https://dash.plotly.com/basic-callbacks) shows input/output callback without using a list. The use of list was in legacy version of Dash.
 ```commandline
 @callback(
     Output('output1', 'children'),
