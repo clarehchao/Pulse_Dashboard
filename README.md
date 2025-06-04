@@ -29,7 +29,7 @@ The dashboard is divided into six main pages:
 ## Technical Development Note-to-self
 
 - Dash 2.14.2 and beyond, don't need to use List anymore for Input/Output callback. [Examples on Dash documentations](https://dash.plotly.com/basic-callbacks) shows input/output callback without using a list. The use of list was in legacy version of Dash.
-```commandline
+```python
 @callback(
     Output('output1', 'children'),
     Output('output2', 'children'),           # Comma-separated, no list
@@ -41,7 +41,7 @@ def my_callback(input1_val, input2_val, state1_val):
     return "result1", "result2"             # Return tuple for multiple outputs
 ```
 - One can run Dash with **NO INPUT CALLBACK** as the following
-```commandline
+```python
 # Static executive dashboard
 app.layout = html.Div([
     html.H1("Q4 Healthcare Report"),
@@ -73,7 +73,7 @@ chart2 = px.bar(sales_data, x='Month', y='Sales',
     - Semantic structure → HTML (\<h1\>, \<nav\>, \<article\>)
     - Screen readers → HTML has better support
     
-    Decision Tree on how to use:
+    **Decision Tree** on how to use:
 ```commandline
 Is it simple text/title?
 ├─ Yes → Use HTML
