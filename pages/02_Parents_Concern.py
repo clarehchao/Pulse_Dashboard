@@ -17,6 +17,11 @@ fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_parents = f'{fdir}/Pulse_Parents_Survey_CChao.csv'
 df_parents = Read_Clean_Data(fname_parents, grptype = 'parents')
 
+# write cleaned data into .csv
+fname_cleandata = f'{fdir}/Pulse_Parents_CleanSurvey.csv'
+print(df_parents.columns)
+df_parents.to_csv(fname_cleandata)
+
 # make sure to set up className and define style in css file
 dropdown_menu1 = dbc.Row([
     dbc.Col([

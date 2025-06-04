@@ -15,6 +15,11 @@ register_page(
 fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_teens = f'{fdir}/Pulse_Teens_Survey_CChao.csv'
 df_teens = Read_Clean_Data(fname_teens,grptype = 'teens')
+
+# write the clean data to .csv
+fname_cleandata = f'{fdir}/Pulse_Teens_CleanSurvey.csv'
+df_teens.to_csv(fname_cleandata)
+
 grade_val = sorted([int(ss) for ss in df_teens['Grade'].dropna().unique().tolist()])
 grade_label = [str(ss) + get_ordinal(ss) for ss in grade_val] + ['All']
 grade_val = grade_val + ['All']

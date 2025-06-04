@@ -84,15 +84,13 @@ layout = dbc.Container(
 )
 
 @callback(
-    [
-        Output("teens-age-chart", "figure"),
-        Output("grade-chart", "figure"),
-        Output("expemo-grade-chart", "figure"),
-        Output("guide-helpful-chart", "figure"),
-        Input("teens-age-chart", "id"),
-        Input("grade-chart", "id"),
-        Input("expemo-grade-chart", "id"),
-    ],
+    Output("teens-age-chart", "figure"),
+    Output("grade-chart", "figure"),
+    Output("expemo-grade-chart", "figure"),
+    Output("guide-helpful-chart", "figure"),
+    Input("teens-age-chart", "id"),
+    Input("grade-chart", "id"),
+    Input("expemo-grade-chart", "id")
 )
 def update_chart(age, grade, expemo):
 
@@ -250,9 +248,4 @@ def update_chart(age, grade, expemo):
     guide_helpful_chart.update_xaxes(labelalias=talkguide_labels_dct)
     guide_helpful_chart.update_yaxes(labelalias=helpful_labels_dct)
 
-    return (
-        teens_age_chart,
-        grade_chart,
-        grade_expemo_chart,
-        guide_helpful_chart
-    )
+    return teens_age_chart, grade_chart, grade_expemo_chart, guide_helpful_chart

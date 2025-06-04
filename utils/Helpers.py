@@ -23,42 +23,6 @@ parent_concern_dct = {'academic stress': 'Career and Academic Development',
                           'identity development (peer pressure, gender exploration)': 'Identity Development',
                           }
 
-# AdviceSource1-5: Categories (Therapist & Professionals, Families & Friends, Other Parents, Google, A.I., Online Resources)
-# advicesrc_categories_dct = {
-#     'therapists': 'Therapist & Professionals',
-#     'therapy': 'Therapist & Professionals',
-#     'therapist': 'Therapist & Professionals',
-#     'psychologist': 'Therapist & Professionals',
-#     'psychologists': 'Therapist & Professionals',
-#     'pediatrician': 'Therapist & Professionals',
-#     'psicóloga': 'Therapist & Professionals',
-#     'therapy/professional help': 'Therapist & Professionals',
-#     'professionals': 'Therapist & Professionals',
-#     'holistic therapy': 'Therapist & Professionals',
-#     'husband': 'Families & Friends',
-#     'family': 'Families & Friends',
-#     'your partner': 'Families & Friends',
-#     'friends': 'Families & Friends',
-#     'friends/family': 'Families & Friends',
-#     'friends / family': 'Families & Friends',
-#     'my own parents': 'Families & Friends',
-#     'siblings': 'Families & Friends',
-#     'google': 'Online Resources',
-#     'instagram following lisa damour and other adolescent psychs': 'Online Resources',
-#     'facebook groups':'Online Resources',
-#     'podcasts': 'Online Resources',
-#     'spiritual coach': 'Religious & Spiritual community',
-#     'religious community': 'Religious & Spiritual community',
-#     'parenting books': 'Books',
-#     'other moms': 'Other Parents',
-#     'couple': 'Other Parents',
-#     'friends who are also parents': 'Other Parents',
-#     'friends who are parents': 'Other Parents',
-#     'other parents/friends': 'Other Parents',
-#     'chatgpt': 'Artificial Intelligence',
-#     'a.i': 'Artificial Intelligence'
-# }
-
 advicesrc_categories_dct = {
     'therapists': 'Therapist & Professionals',
     'therapy': 'Therapist & Professionals',

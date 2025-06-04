@@ -104,20 +104,18 @@ layout = dbc.Container(
 
 # callback cards and graphs
 @callback(
-    [
-        Output("gender-chart", "figure"),
-        Output("age-chart", "figure"),
-        Output("marital-chart", "figure"),
-        Output("state-chart", "figure"),
-        Output("ethnicity-chart", "figure"),
-        Output("parents-teens-chart", "figure"),
-        Input("gender-chart", "id"),
-        Input("age-chart", "id"),
-        Input("marital-chart", "id"),
-        Input("state-chart", "id"),
-        Input("ethnicity-chart", "id"),
-        Input("parents-teens-chart", "id"),
-    ],
+    Output("gender-chart", "figure"),
+    Output("age-chart", "figure"),
+    Output("marital-chart", "figure"),
+    Output("state-chart", "figure"),
+    Output("ethnicity-chart", "figure"),
+    Output("parents-teens-chart", "figure"),
+    Input("gender-chart", "id"),
+    Input("age-chart", "id"),
+    Input("marital-chart", "id"),
+    Input("state-chart", "id"),
+    Input("ethnicity-chart", "id"),
+    Input("parents-teens-chart", "id")
 )
 
 def update_chart(gender, age, marital, state, ethnicity,parents_teens):
@@ -333,11 +331,4 @@ def update_chart(gender, age, marital, state, ethnicity,parents_teens):
         ybins=dict(start=0, end=5, size=1)
     )
 
-    return (
-        gender_chart,
-        age_chart,
-        marital_chart,
-        state_chart,
-        ethnicity_chart,
-        parent_teen_chart
-    )
+    return gender_chart, age_chart, marital_chart, state_chart, ethnicity_chart, parent_teen_chart

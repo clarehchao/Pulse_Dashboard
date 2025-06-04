@@ -26,6 +26,64 @@ The dashboard is divided into six main pages:
 
 [Live Demo of the interactive dashboard](https://www.dropbox.com/scl/fi/cy0yvkli2xefq66qy4aya/dashboard_demo.mov?rlkey=a9uvxmhdehi1mfpswbmvrgm93&st=1ofcl8u1&dl=0)
 
+## Technical Development Note-to-self
+
+- Dash 2.14.2 and beyond, don't need to use List anymore for Input/Output callback. [Examples on Dash documentation](https://dash.plotly.com/basic-callbacks) shows input/output callback without using a list. The use of list was in legacy version of Dash.
+```commandline
+@callback(
+    Output('output1', 'children'),
+    Output('output2', 'children'),           # Comma-separated, no list
+    Input('input1', 'value'),
+    Input('input2', 'value'),               # Comma-separated, no list
+    State('state1', 'value')                # Comma-separated, no list
+)
+def my_callback(input1_val, input2_val, state1_val):
+    return "result1", "result2"             # Return tuple for multiple outputs
+```
+- One can run Dash with **NO INPUT CALLBACK** as the following
+```commandline
+# Static executive dashboard
+app.layout = html.Div([
+    html.H1("Q4 Healthcare Report"),
+    dcc.Graph(figure=chart1),      # Pre-built chart
+    dcc.Graph(figure=chart2),      # Pre-built chart
+    html.Table(summary_table)             # Pre-built table
+])
+# No callbacks needed!
+
+chart1 = px.scatter(df, x='sepal_width', y='sepal_length', 
+                                color='species', title='Patient Scatter Plot')
+chart2 = px.bar(sales_data, x='Month', y='Sales', 
+                            title='Monthly Healthcare Revenue')
+```
+- The 80/20 Rule for Dash Markdown vs HTML
+    - 80% of titles/labels → Use HTML
+    - 20% complex content → Use Markdown
+  
+    🚀 Performance First
+    - High-frequency updates → HTML 
+    - Static content → Either works 
+    - User-generated content → Markdown
+  
+    🎨 Styling Priority 
+    - Pixel-perfect design → HTML 
+    - Content-focused → Markdown
+
+    📱 Accessibility
+    - Semantic structure → HTML (\<h1\>, \<nav\>, \<article\>)
+    - Screen readers → HTML has better support
+    
+    Decision Tree on how to use:
+```commandline
+Is it simple text/title?
+├─ Yes → Use HTML
+└─ No → Does it need formatting (bold, lists, tables)?
+   ├─ Yes → Use Markdown  
+   └─ No → Is performance critical?
+      ├─ Yes → Use HTML
+      └─ No → Use either (prefer HTML for consistency)
+```
+
 ## Tools that I used to build
 
 The dashboard was built using Python, Plotly Dash Framework, and CSS. It is hosted by [PythonAnywhere](https://www.pythonanywhere.com/).
@@ -38,9 +96,11 @@ The dashboard was built using Python, Plotly Dash Framework, and CSS. It is host
 
 ![Static Badge](https://img.shields.io/badge/PythonAnywhere-%231D9FD7?style=for-the-badge&logo=PythonAnywhere&logoColor=%23FFFFFF)
 
+
 ## Contact
 
 For feedback and suggestion, please contact [Shih-ying (Clare) Chao](https://www.linkedin.com/in/shihyinghuang).
+
 
 
 

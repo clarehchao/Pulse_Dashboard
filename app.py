@@ -9,7 +9,6 @@ app = Dash(
     external_stylesheets=[dbc.themes.LITERA],
 )
 
-
 # sidebar
 sidebar = html.Div(
     [
