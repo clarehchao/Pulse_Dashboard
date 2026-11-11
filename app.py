@@ -8,6 +8,7 @@ app = Dash(
     title='Pulse Survey Dashboard',
     external_stylesheets=[dbc.themes.LITERA],
 )
+server = app.server
 
 # sidebar
 sidebar = html.Div(
