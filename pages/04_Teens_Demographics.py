@@ -2,6 +2,7 @@ from dash import callback, dcc, html, Output, Input,register_page
 import dash_bootstrap_components as dbc
 import plotly.express as px
 from utils.Helpers import Read_Clean_Data,get_ordinal
+import os
 
 register_page(
     __name__,
@@ -12,7 +13,9 @@ register_page(
 
 # dataset
 # read and clean TEENS DATA
-fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+fdir = f'{base_dir}/data'
+# fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_teens = f'{fdir}/Pulse_Teens_Survey_CChao.csv'
 df_teens = Read_Clean_Data(fname_teens,grptype = 'teens')
 N_teens = df_teens.shape[0]

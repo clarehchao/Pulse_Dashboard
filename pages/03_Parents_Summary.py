@@ -4,6 +4,7 @@ from dash.exceptions import PreventUpdate
 import numpy as np
 import plotly.express as px
 from utils.Helpers import Read_Clean_Data, plot_horizontal_bar,sort_strings_with_numbers
+import os
 
 register_page(
     __name__,
@@ -13,7 +14,9 @@ register_page(
 )
 
 # read and clean PARENT DATA
-fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+fdir = f'{base_dir}/data'
+# fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_parents = f'{fdir}/Pulse_Parents_Survey_CChao.csv'
 df_parents = Read_Clean_Data(fname_parents,grptype = 'parents')
 

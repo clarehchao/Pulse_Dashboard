@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 from utils.Helpers import state_name_to_code
+import os
 
 register_page(
     __name__,
@@ -13,7 +14,9 @@ register_page(
 )
 
 # dataset
-fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+fdir = f'{base_dir}/data'
+# fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_parents = f'{fdir}/Pulse_Parents_Survey_CChao.csv'
 df_parents = pd.read_csv(fname_parents)
 N_parents = df_parents.shape[0]

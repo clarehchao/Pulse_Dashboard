@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 from dash.exceptions import PreventUpdate
 from utils.Helpers import Read_Clean_Data, plot_horizontal_bar,get_ordinal, create_card, circle_chart
+import os
 
 register_page(
     __name__,
@@ -12,7 +13,9 @@ register_page(
 )
 
 # read and clean TEENS DATA
-fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+fdir = f'{base_dir}/data'
+# fdir = '/Users/clarechao/code/python/Pulse_Dashboard/data'
 fname_teens = f'{fdir}/Pulse_Teens_Survey_CChao.csv'
 df_teens = Read_Clean_Data(fname_teens,grptype = 'teens')
 grade_val = sorted([int(ss) for ss in df_teens['Grade'].dropna().unique().tolist()])
