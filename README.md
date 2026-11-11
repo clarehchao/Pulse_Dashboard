@@ -10,7 +10,7 @@ Since the survey data were all text and were recorded from multiple surveys with
 - Since multiple-choice survey questions had no priority in order of entry, One-Hot Encoding was used to creates binary columns indicating the presence or absence of each category for each survey response for ease of further data analysis and queries.
 
 ## Data Visualization
-[An interactive dashboard with multiple navigation links](https://clarechao.pythonanywhere.com/) using *dash-boostrap-component* was designed and created using [Plotly Dash Framework](https://dash.plotly.com/).
+[An interactive dashboard with multiple navigation links](https://pulse-dashboard-mjfj.onrender.com/Parents_Demographics) using *dash-boostrap-component* was designed and created using [Plotly Dash Framework](https://dash.plotly.com/).
 
 The dashboard is divided into six main pages:
   - **Parents Demographics**: this page provides a demographic analysis of parents participating the survey, including gender, age, marital status, ethnicity, geographical distribution by state, and level of parents' involvement in Teens' life vs. level of comfort Teens share with parents.
@@ -86,7 +86,7 @@ Is it simple text/title?
 
 ## Tools that I used to build
 
-The dashboard was built using Python, Plotly Dash Framework, and CSS. It is hosted by [PythonAnywhere](https://www.pythonanywhere.com/).
+The dashboard was built using Python, Plotly Dash Framework, and CSS. It is hosted by [Render](https://www.render.com/).
 
 ![Static Badge](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=%23FFDC0F)
 
@@ -94,7 +94,7 @@ The dashboard was built using Python, Plotly Dash Framework, and CSS. It is host
 
 ![Static Badge](https://img.shields.io/badge/CSS-%23663399?style=for-the-badge&logo=CSS&logoColor=%23FFFFFF)
 
-![Static Badge](https://img.shields.io/badge/PythonAnywhere-%231D9FD7?style=for-the-badge&logo=PythonAnywhere&logoColor=%23FFFFFF)
+![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=white)
 
 
 ## Contact
